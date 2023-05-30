@@ -10,6 +10,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ListComponent } from './list/list.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { CardComponent } from './card/card.component';
+import { CountryDetailComponent } from './country-detail/country-detail.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CardComponent } from './card/card.component';
     HomepageComponent,
     ListComponent,
     QuizComponent,
-    CardComponent
+    CardComponent,
+    CountryDetailComponent
   ],
   imports: [
     BrowserModule,
