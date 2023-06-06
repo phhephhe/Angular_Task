@@ -1,5 +1,5 @@
 <div class="card-container">
-    <a routerLink="/details/{{country.id}}" *ngFor="let country of CountryDataService.countries">
+    <a routerLink="detail/{{country.id}}" *ngFor="let country of CountryDataService.countries">
         <app-card  [countries]="country"></app-card>
     </a>
 </div>

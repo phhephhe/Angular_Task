@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: '', component: HomepageComponent, title: 'Home page' },
   { path: 'list', component: ListComponent, title: 'List page' },
   { path: 'quiz', component: QuizComponent, title: 'Quiz page' },
-  { path: 'details/:id', component: CountryDetailComponent, title: 'Details of Country' },
+  { path: 'detail/:id', component: CountryDetailComponent, title: 'country detail' }
 
 ];
 

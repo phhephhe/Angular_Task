@@ -1,3 +1,8 @@
-<p>country-id : {{countryId}}</p>
-<p>To install Angular, open a terminal and run the following command:</p>
-<code>npm install -g @angular/cli</code>
+<div class="card bg-dark text-white">
+    <img class="card-img" [src]="specificCountry[0].img" alt="Card image">
+    <div class="card-img-overlay">
+      <h5 class="card-title text-dark">{{specificCountry[0].name}}</h5>
+      <p class="card-text text-dark">{{specificCountry[0].about}}</p>
+      <p class="card-text text-danger">{{specificCountry[0].id}}</p>
+    </div>
+  </div>
