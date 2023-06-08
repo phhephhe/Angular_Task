@@ -3,10 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { HomepageComponent } from './homepage/homepage.component';
+import { HomePageComponent } from './homepage/homepage.component';
 import { ListComponent } from './list/list.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { CardComponent } from './card/card.component';
@@ -17,7 +17,7 @@ import { CountryDetailComponent } from './country-detail/country-detail.componen
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomepageComponent,
+    HomePageComponent,
     ListComponent,
     QuizComponent,
     CardComponent,
@@ -26,7 +26,8 @@ import { CountryDetailComponent } from './country-detail/country-detail.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
