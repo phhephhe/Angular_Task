@@ -17,6 +17,6 @@ export class HeaderComponent {
   constructor(private dataSendService: DataSendService) {}
 
   sendData(): void {
-    this.dataSendService.setInputValue(this.inputValue);
+    this.dataSendService.inputValueSubject.next(this.inputValue) ;
   }
 }

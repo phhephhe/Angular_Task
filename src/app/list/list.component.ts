@@ -10,15 +10,13 @@ import { Observable } from 'rxjs';
 export class ListComponent implements OnInit{
 
   public data$! : Observable<any>
+  public dataFake$! : Observable<any>
+
 
   constructor(private _dataFromBack : DatafrombackService){}
 
   ngOnInit(): void {
     this.data$ = this._dataFromBack.getData();
-    this.data$.subscribe(res => {
-      console.log(res); 
-    });
   }
   
-
 }

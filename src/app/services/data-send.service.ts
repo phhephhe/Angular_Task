@@ -5,13 +5,7 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class DataSendService {
-  private inputValueSubject: Subject<string> = new Subject<string>();
+  
+  public inputValueSubject: Subject<string> = new Subject<string>();
 
-  setInputValue(value: string): void {
-    this.inputValueSubject.next(value);
-  }
-
-  getInputValue(): Subject<string> {
-    return this.inputValueSubject;
-  }
 }

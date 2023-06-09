@@ -17,15 +17,16 @@ export class HomePageComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.dataSendService.getInputValue().subscribe(value => {
+    this.dataSendService.inputValueSubject.subscribe(value => {
       this.inputValue = value;
-      this.filterCountries();
+
+      this.filteredCountries = this.countryDataService.countries.filter(country =>
+        country.name.toLowerCase().includes(this.inputValue.toLowerCase())
+      );
     });
   }
 
-  filterCountries(): void {
-    this.filteredCountries = this.countryDataService.countries.filter(country =>
-      country.name.toLowerCase().includes(this.inputValue.toLowerCase())
-    );
-  }
+   
+
+
 }
