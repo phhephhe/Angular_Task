@@ -1,7 +1,7 @@
 <h1>Input Value: {{ inputValue }}</h1>
 
 <div class="card-container">
-    <a routerLink="detail/{{country}}" *ngFor="let country of filteredCountries ">
+    <a routerLink="detail/{{country.id}}" *ngFor="let country of filteredCountries ">
         <app-card  [countries]="country"></app-card>
     </a>
 </div>

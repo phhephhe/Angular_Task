@@ -11,7 +11,7 @@ import { ListComponent } from './list/list.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { CardComponent } from './card/card.component';
 import { CountryDetailComponent } from './country-detail/country-detail.component';
-
+import { HttpClientModule } from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +27,8 @@ import { CountryDetailComponent } from './country-detail/country-detail.componen
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

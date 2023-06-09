@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { CountryDataService } from '../country-data.service';
-import { Country } from '../country';
-import { DataSendService } from '../data-send.service';
+import { CountryDataService } from '../services/country-data.service';
+import { Country } from '../interfaces/country';
+import { DataSendService } from '../services/data-send.service';
 import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-header',

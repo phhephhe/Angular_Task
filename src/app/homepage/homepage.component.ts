@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DataSendService } from '../data-send.service';
-import { CountryDataService } from '../country-data.service';
-import { Country } from '../country';
+import { DataSendService } from '../services/data-send.service';
+import { CountryDataService } from '../services/country-data.service';
+import { Country } from '../interfaces/country';
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
