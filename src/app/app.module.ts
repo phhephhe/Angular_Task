@@ -8,10 +8,13 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomePageComponent } from './homepage/homepage.component';
 import { ListComponent } from './list/list.component';
-import { QuizComponent } from './quiz/quiz.component';
+import { CoursesComponent } from './courses/courses.component';
 import { CardComponent } from './card/card.component';
 import { CountryDetailComponent } from './country-detail/country-detail.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { CourseLessonsComponent } from './courses/course-lessons/course-lessons.component';
+import { CategoryCardtComponent } from './courses/category-card/category-card.component';
+import { LessonCardComponent } from './courses/course-lessons/lesson-card/lesson-card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,18 +22,21 @@ import { HttpClientModule } from '@angular/common/http'
     FooterComponent,
     HomePageComponent,
     ListComponent,
-    QuizComponent,
+    CoursesComponent,
     CardComponent,
-    CountryDetailComponent
+    CountryDetailComponent,
+    CourseLessonsComponent,
+    CategoryCardtComponent,
+    LessonCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
