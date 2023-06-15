@@ -1,0 +1,28 @@
+<div class="row" *ngIf="detailLesson$ | async as detailLesson">
+  <div class="col">
+    <h3 [innerHTML]="detailLesson.data.title"></h3>
+    <iframe
+      width="560"
+      height="315"
+      [src]="getSafeUrl(detailLesson.data.youtubeLink)"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+    <p [innerHTML]="detailLesson.data.descr"></p>
+  </div>
+
+  <div class="col">
+    <div
+      *ngFor="let course of detailLesson.similarCourses"
+      class="card"
+      style="width: 20rem"
+    >
+      <a class="ng-star-inserted">
+        <img style="width: 200px" src="https://val-do.com/{{ course.img }}" />
+        <p [innerHTML]="course.title"></p>
+      </a>
+    </div>
+  </div>
+</div>

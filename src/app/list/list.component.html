@@ -1,11 +1,13 @@
+<h1>Categories</h1>
 
-<ng-container *ngIf="data$ | async as data">
-    <h1>Categories</h1>
-    <div  class="card" *ngFor="let category of data.categories">
-        <div class="card-body">
-            <h3 [innerHTML]="category.title"></h3>
-            <p [innerHTML]="category.descr"></p>
-            <div [innerHTML]="category.metaAuthor"></div>
-        </div>
-    </div>
-</ng-container>
+<div class="d-flex flex-wrap gap-3" *ngIf="data$ | async as data">
+  <div class="card" style="width: 20rem;" *ngFor="let category of data">
+    <a routerLink="/list/lessons/{{category._id}}" class="text-decoration-none">
+      <div class="mat-card mat-focus-indicator">
+        <img src="https://val-do.com/{{ category.img }}" class="card-img-top" />
+        <h3 [innerHTML]="category.title"></h3>
+
+      </div>
+    </a>
+  </div>
+</div>

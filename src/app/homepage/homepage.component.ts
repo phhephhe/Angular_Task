@@ -17,6 +17,8 @@ export class HomePageComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.filteredCountries = this.countryDataService.countries;
+
     this.dataSendService.inputValueSubject.subscribe(value => {
       this.inputValue = value;
 

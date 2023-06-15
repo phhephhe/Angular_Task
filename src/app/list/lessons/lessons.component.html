@@ -1,0 +1,14 @@
+<h1>Lessons</h1>
+
+<div class="d-flex flex-wrap gap-3" *ngIf="lessonsList$ | async as lessonsList">
+  <div *ngFor="let lesson of lessonsList">
+    <a routerLink="/lesson/detail/{{lesson._id}}">
+        <div class="card" style="width: 18rem">
+          <img src="https://val-do.com/{{ lesson.img }}" class="card-img-top" />
+          <h3 [innerHTML]="lesson.title"></h3>
+
+          <!-- <p [innerHTML]="lesson.descr"></p> -->
+        </div>
+      </a>
+  </div>
+</div>

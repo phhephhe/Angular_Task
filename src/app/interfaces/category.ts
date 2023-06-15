@@ -6,6 +6,5 @@ export interface Category {
   metaDescr: string;
   metaAuthor: string;
   img: string;
-  __v: number;
   isFavorite: boolean;
 }

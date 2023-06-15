@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DatafrombackService } from '../services/datafromback.service';
 import { Observable } from 'rxjs';
+import { Category } from '../interfaces/category';
 
 @Component({
   selector: 'app-list',
@@ -9,8 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class ListComponent implements OnInit{
 
-  public data$! : Observable<any>
-  public dataFake$! : Observable<any>
+  public data$! : Observable<Category[]>
 
 
   constructor(private _dataFromBack : DatafrombackService){}
