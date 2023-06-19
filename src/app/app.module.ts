@@ -13,6 +13,7 @@ import { CountryDetailComponent } from './country-detail/country-detail.componen
 import { HttpClientModule } from '@angular/common/http';
 import { LessonsComponent } from './list/lessons/lessons.component';
 import { DetailLessonComponent } from './list/detail-lesson/detail-lesson.component';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,7 @@ import { DetailLessonComponent } from './list/detail-lesson/detail-lesson.compon
     CountryDetailComponent,
     LessonsComponent,
     DetailLessonComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
