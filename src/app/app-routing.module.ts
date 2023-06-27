@@ -6,6 +6,8 @@ import {CountryDetailComponent} from './country-detail/country-detail.component'
 import {LessonsComponent} from './list/lessons/lessons.component';
 import {DetailLessonComponent} from './list/detail-lesson/detail-lesson.component';
 import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './login/registration/registration.component';
+import { AuthorizationComponent } from './login/authorization/authorization.component';
 
 const routes: Routes = [
     {
@@ -36,7 +38,11 @@ const routes: Routes = [
     {
       path: 'login',
       component: LoginComponent,
-      title: 'login'
+      title: 'login',
+      children: [
+        {path:"login/registration", component:RegistrationComponent,title:"registration"},
+        {path:"login/authorization", component:AuthorizationComponent,title:"authorization"},
+      ]
   },
 
 

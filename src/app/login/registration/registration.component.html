@@ -1,0 +1,33 @@
+<form [formGroup]="form" class="card">
+  <div class="form-group" class="card-body">
+    <div class="col-auto">
+      <label class="sr-only">Firstname</label>
+      <input
+        formControlName="firstName"
+        type="text"
+        class="form-control mb-2"
+      />
+    </div>
+    <div class="col-auto">
+      <label class="sr-only">Lastname</label>
+      <input formControlName="lastName" type="text" class="form-control mb-2" />
+    </div>
+    <div class="col-auto">
+      <label class="sr-only">Mobile</label>
+      <input class="form-control mb-2" type="tel" formControlName="phone" />
+    </div>
+    <label>Email address</label>
+    <input type="email" class="form-control" formControlName="email" />
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" class="form-control" formControlName="password" />
+    </div>
+  </div>
+  <button
+    type="submit"
+    class="btn btn-primary mt-3"
+    (click)="register()"
+    [disabled]="form.invalid">
+    რეგისტრაცია
+  </button>
+</form>
