@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable} from 'rxjs';
 import { tap } from 'rxjs';
 
 @Injectable({
@@ -20,6 +20,12 @@ export class RegistrationService {
   }
 
 
-  
+  login(userData: any): Observable<any>{
+    return this._http.post<any>("http://localhost:8000/api/login",userData).pipe(
+      tap(res => {
+        localStorage.setItem('user', JSON.stringify(res))
+      })
+    )
+  }
 
 }
