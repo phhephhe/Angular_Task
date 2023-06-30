@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { RegistrationService } from 'src/app/services/registration.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { RegistrationService } from 'src/app/services/registration.service';
 export class AuthorizationComponent implements OnInit{
   form! : FormGroup;
 
-  constructor(private _http:RegistrationService, private _fb : FormBuilder){
+  constructor(private _http:RegistrationService, private _fb : FormBuilder, private router: Router){
 
   }
 
@@ -23,7 +24,9 @@ export class AuthorizationComponent implements OnInit{
 
   submit(){
     this._http.login(this.form.value).subscribe(
-      res => console.log(res),
+      res =>{
+        this.router.navigateByUrl('profile')
+      },
       err => console.log(err.error)
     )
   }

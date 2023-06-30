@@ -10,12 +10,14 @@ import { HomePageComponent } from './homepage/homepage.component';
 import { ListComponent } from './list/list.component';
 import { CardComponent } from './card/card.component';
 import { CountryDetailComponent } from './country-detail/country-detail.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LessonsComponent } from './list/lessons/lessons.component';
 import { DetailLessonComponent } from './list/detail-lesson/detail-lesson.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './login/registration/registration.component';
 import { AuthorizationComponent } from './login/authorization/authorization.component';
+import { ProfileComponent } from './profile/profile.component';
+import { InterceptorInterceptor } from './interceptor.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +32,7 @@ import { AuthorizationComponent } from './login/authorization/authorization.comp
     LoginComponent,
     RegistrationComponent,
     AuthorizationComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,13 @@ import { AuthorizationComponent } from './login/authorization/authorization.comp
     FormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

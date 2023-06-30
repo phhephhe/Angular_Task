@@ -8,12 +8,18 @@ import {DetailLessonComponent} from './list/detail-lesson/detail-lesson.componen
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './login/registration/registration.component';
 import { AuthorizationComponent } from './login/authorization/authorization.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
     {
         path: '',
         component: HomePageComponent,
         title: 'Home page'
+    },
+    {
+        path: 'profile',
+        component: ProfileComponent,
+        title: 'profile'
     },
     {
         path: 'detail/:id',
